@@ -21,6 +21,7 @@ helm install prometheus prometheus-community/kube-prometheus-stack --version "9.
 ### Link to chart
 ```
 [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack]
+https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack
 ```
 
 ### Ref
