@@ -1,4 +1,4 @@
-[Web Developer Roadmap - 2021](https://i.imgur.com/4u3LK4j.png)
+![Web Developer Roadmap - 2021](https://github.com/hieunt84/play-k8s-prometheus/blob/master/05-access-GrafanaUI/images/node-dashboard.png)
 1. What is Grafana?
 - công cụ để vẽ đồ thị (visualize) từ các số liệu (metrics) được lưu trữ trong datasource.
 - có giao diện web UI đẹp.
