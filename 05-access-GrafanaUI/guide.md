@@ -4,6 +4,8 @@
 
 2. Tìm hiểu về Dashboard các thành phần k8s
 ![Node Dashboard](https://github.com/hieunt84/play-k8s-prometheus/blob/master/05-access-GrafanaUI/images/node-dashboard.png)
+  Node Dashboard
+
 - Cluster
 - API Server
 ...
