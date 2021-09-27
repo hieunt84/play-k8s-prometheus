@@ -81,7 +81,7 @@ mà mục tiêu expose ra thường là http://địa-chỉ/metrics
    - dùng exporter (scripts, service)
    - exporter sẽ làm công việc:
      + đi lấy dữ liệu từ target.
-     + convert data
-     + expose metric
+     + convert data.
+     + expose metric.
    - có 1 danh sách export được hỗ trợ có thể tìm thấy trên trang chủ, github.
-    
+  - Ví dụ: Các bước monitor server linux
