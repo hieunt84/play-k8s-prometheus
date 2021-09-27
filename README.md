@@ -32,7 +32,7 @@
   + là 1 phần của workflow (qui trình) DevOps.
   + Cảnh báo tự động khi hệ thống có vấn đề.
 
-### 4. Tíng năng Prometheus
+### 4. Tính năng Prometheus
 - tin cậy.
 - sử dụng cơ chế pull metrics (số liệu).
 - kiến trúc standalone.
@@ -48,8 +48,35 @@
 - gồm có 3 thành nhỏ bên trong
   + Retrieval Worker: đi thu thập metrics (số liệu) từ target(mục tiêu) như   application, server, services,...
   + Storage: lưu trữ số liệu thu thập được.
-  + http server: api gateway, tiếp nhận yêu cầu từ bên ngoài để truy vấn dữ liệu.
+  + http server: api gateway, tiếp nhận yêu cầu từ bên ngoài để truy vấn dữ liệu được lưu trữ trong storage.
 
+#### 5.3 Target and Metrics
+- Target là các mục tiêu cần giám sát ví dụ như:
+  + Application như: wordpress,...
+  + Service như: database,...
+  + Server như: linux server, apache server,...
+- Metrics các số liệu cần thu thập từ target ví dụ như:
+  + Sử dụng bao nhiêu % CPU
+
+#### 5.3 Metrics
+- format mà con người có thể đọc được
+- có 3 dạng:
+  + Counter: đếm số lần xảy ra/ xuất hiện.
+    ví dụ: đếm số request API Server nhận được.
+  + Gauge: giá trị hiện thời của x
+    ví dụ: trạng thái up/down, %CPU đang dùng,...
+  + History (biểu đồ) : how long or how big?
+    ví dụ: request xử lý bao lâu.
+
+### 6. Cách Prometheus thu thập số liệu từ mục tiêu?
+- Worker đi pull số liệu từ mục tiêu qua giao thức http/https tại địa chỉ
+mà mục tiêu expose ra thường là http://địa-chỉ/metrics
+- Mục tiêu phải expose metric thông qua địa chỉ cụ thể.
+- Dạng metric expose ra phải đúng với format của Prometheus.
+#### 6.1 Target Endpoint and Exporter
+- có 3 dang target:
+6.1.1 Target hỗ trợ native cho prometheus
+- ta không cần làm gì cả. ví dụ: Grafana, Ansibe-Tower,...
 
 
 
