@@ -62,11 +62,11 @@
 - format mà con người có thể đọc được
 - có 3 dạng:
   + Counter: đếm số lần xảy ra/ xuất hiện.
-    ví dụ: đếm số request API Server nhận được.
+    - ví dụ: đếm số request API Server nhận được.
   + Gauge: giá trị hiện thời của x
-    ví dụ: trạng thái up/down, %CPU đang dùng,...
+    - ví dụ: trạng thái up/down, %CPU đang dùng,...
   + History (biểu đồ) : how long or how big?
-    ví dụ: request xử lý bao lâu.
+    - ví dụ: request xử lý bao lâu.
 
 ### 6. Cách Prometheus thu thập số liệu từ mục tiêu?
 - Worker đi pull số liệu từ mục tiêu qua giao thức http/https tại địa chỉ
@@ -74,9 +74,14 @@ mà mục tiêu expose ra thường là http://địa-chỉ/metrics
 - Mục tiêu phải expose metric thông qua địa chỉ cụ thể.
 - Dạng metric expose ra phải đúng với format của Prometheus.
 #### 6.1 Target Endpoint and Exporter
-- có 3 dang target:
+- có 3 dạng target:
 1. Target hỗ trợ native cho prometheus
-  - ta không cần làm gì cả. ví dụ: Grafana, Ansibe-Tower,...
-
-
-
+   - ta không cần làm gì cả. ví dụ: Grafana, Ansibe-Tower,...
+2. Target không hỗ trợ native
+   - dùng exporter (scripts, service)
+   - exporter sẽ làm công việc:
+     + đi lấy dữ liệu từ target.
+     + convert data
+     + expose metric
+   - có 1 danh sách export được hỗ trợ có thể tìm thấy trên trang chủ, github.
+    
