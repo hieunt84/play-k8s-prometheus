@@ -1,6 +1,7 @@
 # play-k8s-prometheus
 ### Ref
 ```
+-https://www.youtube.com/watch?v=h4Sl21AKiDg
 -Part1: https://www.youtube.com/watch?v=QoDqxm7ybLc&list=PLy7NrYWoggjwPggqtFsI_zMAwvG0SqYCb&index=31
 -Part2: https://www.youtube.com/watch?v=mLPg49b33sA
 -https://github.com/prometheus/prometheus
@@ -43,9 +44,11 @@
 
 #### 5.2 Prometheus server
 - là thành phần chính trong kiến trúc
+![Prometheus server](https://github.com/hieunt84/play-k8s-prometheus/blob/master/images/prometheus-server.png)
 - gồm có 3 thành nhỏ bên trong
   + Retrieval Worker: đi thu thập metrics (số liệu) từ target(mục tiêu)
   + Storage: lưu trữ số liệu thu thập được.
+  + http server: api gateway, tiếp nhận yêu cầu từ bên ngoài để truy vấn dữ liệu.
 
 
 
