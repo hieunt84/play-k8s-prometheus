@@ -85,5 +85,15 @@ mà mục tiêu expose ra thường là http://địa-chỉ/metrics
      + expose metric.
    - có 1 danh sách export được hỗ trợ có thể tìm thấy trên trang chủ, github.
    - Ví dụ: Các bước monitor server linux
-     + download exporter
-     + untar and excute
+     + download a node exporter
+     + untar and execute
+     + convert metrics of server
+     + expose /metrics endpoint
+     + config prometheus to scrape this endpoint
+   - ví dụ: muốn monitor mongodb deploy in k8s
+     + exporter hỗ trợ mogodb được đóng gói thành image container
+     + triển khai exepoter đó.
+     + config prometheus thu thập metrics từ endpoint này (tự động thông qua service monitor).
+3. Monitor your own application
+   - sử dụng client libraries.
+   
