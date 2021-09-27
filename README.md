@@ -84,4 +84,6 @@ mà mục tiêu expose ra thường là http://địa-chỉ/metrics
      + convert data.
      + expose metric.
    - có 1 danh sách export được hỗ trợ có thể tìm thấy trên trang chủ, github.
-  - Ví dụ: Các bước monitor server linux
+   - Ví dụ: Các bước monitor server linux
+     + download exporter
+     + untar and excute
