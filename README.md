@@ -77,6 +77,7 @@ mà mục tiêu expose ra thường là http://địa-chỉ/metrics
 - có 3 dạng target:
 1. Target hỗ trợ native cho prometheus
    - ta không cần làm gì cả. ví dụ: Grafana, Ansibe-Tower,...
+
 2. Target không hỗ trợ native
    - dùng exporter (scripts, service)
    - exporter sẽ làm công việc:
@@ -90,10 +91,17 @@ mà mục tiêu expose ra thường là http://địa-chỉ/metrics
      + convert metrics of server
      + expose /metrics endpoint
      + config prometheus to scrape this endpoint
-   - ví dụ: muốn monitor mongodb deploy in k8s
+
+   - ví dụ: monitor mongodb deploy in k8s
      + exporter hỗ trợ mogodb được đóng gói thành image container
-     + triển khai exepoter đó.
+     + triển khai exporter đó.
      + config prometheus thu thập metrics từ endpoint này (tự động thông qua service monitor).
+     
+   - ví dụ: monitor app bitnami/wordpress deploy in k8s
+     + exporter hỗ trợ được đóng gói thành image container.
+     + triển khai exporter dạng sidecard/helper container bên trong pod wordpress.
+     + config prometheus thu thập metrics từ endpoint này (tự động thông qua service monitor).
+
 3. Monitor your own application
    - sử dụng client libraries.
    
