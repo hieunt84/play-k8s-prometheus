@@ -44,8 +44,8 @@
 #### 5.2 Prometheus server
 - là thành phần chính trong kiến trúc
 - gồm có 3 thành nhỏ bên trong
-+ Retrieval Worker: đi thu thập metrics (số liệu) từ target(mục tiêu)
-+ Storage: lưu trữ số liệu thu thập được.
+  + Retrieval Worker: đi thu thập metrics (số liệu) từ target(mục tiêu)
+  + Storage: lưu trữ số liệu thu thập được.
 
 
 
