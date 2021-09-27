@@ -3,7 +3,7 @@
 ```
 -Part1: https://www.youtube.com/watch?v=QoDqxm7ybLc&list=PLy7NrYWoggjwPggqtFsI_zMAwvG0SqYCb&index=31
 -Part2: https://www.youtube.com/watch?v=mLPg49b33sA
-- https://github.com/prometheus/prometheus
+-https://github.com/prometheus/prometheus
 ```
 
 ### 1. Prometheus là gì?
@@ -38,10 +38,10 @@
 - ít phức tạp, dễ dàng tiếp cận.
 
 ### 5. Cơ chế hoạt động của Prometheus, Kiến trúc Prometheus
-- kiến trúc tổng quan
+#### 5.1 kiến trúc tổng quan
 ![kiến trúc tổng quan](https://github.com/hieunt84/play-k8s-prometheus/blob/master/images/kien-truc-tong-quan.png)
 
-   
+#### 5.2 Prometheus server
 
 
 
