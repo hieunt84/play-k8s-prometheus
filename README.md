@@ -76,7 +76,7 @@ mà mục tiêu expose ra thường là http://địa-chỉ/metrics
 #### 6.1 Target Endpoint and Exporter
 - có 3 dang target:
 1. Target hỗ trợ native cho prometheus
-- ta không cần làm gì cả. ví dụ: Grafana, Ansibe-Tower,...
+   - ta không cần làm gì cả. ví dụ: Grafana, Ansibe-Tower,...
 
 
 
