@@ -42,6 +42,10 @@
 ![kiến trúc tổng quan](https://github.com/hieunt84/play-k8s-prometheus/blob/master/images/kien-truc-tong-quan.png)
 
 #### 5.2 Prometheus server
+- là thành phần chính trong kiến trúc
+- gồm có 3 thành nhỏ bên trong
++ Retrieval Worker: đi thu thập metrics (số liệu) từ target(mục tiêu)
++ Storage: lưu trữ số liệu thu thập được.
 
 
 
