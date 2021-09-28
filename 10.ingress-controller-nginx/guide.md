@@ -1,4 +1,4 @@
-### Manual deployment ingress controller
+### Monitor ingress controller nginx
 1. Step 01: config in values.yaml
 ```
 controller:
