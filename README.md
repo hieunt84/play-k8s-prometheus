@@ -125,5 +125,15 @@ mà mục tiêu expose ra thường là http://địa-chỉ/metrics
 
 ### 10. Prometheus Data Storage - Where does Prometheus store the data?
 - Prometheus store data in local disk (hdd/ssd) of node.
-- 
-   
+- support config remote storage.
+
+### 11. My Experience (khi play với Prometheus)
+- Learning PromQL.
+- Config Yaml file Prometheus.
+- Creating Dashboard.
+
+### 12. Prometheus Monitoring with Docker and Kubernetes
+- full compatible.
+- Prometheus components are avaible as Docker images.
+- can easily deploy in Container Environments like k8s.
+- Monitoring of k8s Cluster Node Resource out-of-the box!   
