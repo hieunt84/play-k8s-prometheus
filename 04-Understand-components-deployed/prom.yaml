@@ -1,6 +1,6 @@
 Name:               prometheus-prometheus-kube-prometheus-prometheus
-Namespace:          default
-CreationTimestamp:  Sun, 19 Sep 2021 18:31:56 +0700
+Namespace:          prometheus
+CreationTimestamp:  Tue, 21 Sep 2021 13:59:10 +0700
 Selector:           app=prometheus,app.kubernetes.io/instance=prometheus-kube-prometheus-prometheus,app.kubernetes.io/managed-by=prometheus-operator,app.kubernetes.io/name=prometheus,operator.prometheus.io/name=prometheus-kube-prometheus-prometheus,operator.prometheus.io/shard=0,prometheus=prometheus-kube-prometheus-prometheus
 Labels:             app=kube-prometheus-stack-prometheus
                     app.kubernetes.io/instance=prometheus
@@ -13,8 +13,8 @@ Labels:             app=kube-prometheus-stack-prometheus
                     operator.prometheus.io/shard=0
                     release=prometheus
 Annotations:        meta.helm.sh/release-name: prometheus
-                    meta.helm.sh/release-namespace: default
-                    prometheus-operator-input-hash: 1101574567044952169
+                    meta.helm.sh/release-namespace: prometheus
+                    prometheus-operator-input-hash: 1844888308541451784
 Replicas:           1 desired | 1 total
 Update Strategy:    RollingUpdate
 Pods Status:        1 Running / 0 Waiting / 0 Succeeded / 0 Failed
@@ -67,7 +67,7 @@ Pod Template:
       --storage.tsdb.path=/prometheus
       --storage.tsdb.retention.time=10d
       --web.enable-lifecycle
-      --web.external-url=http://prometheus-kube-prometheus-prometheus.default:9090
+      --web.external-url=http://prometheus-kube-prometheus-prometheus.prometheus:9090
       --web.route-prefix=/
       --web.config.file=/etc/prometheus/web_config/web-config.yaml
     Readiness:    http-get http://:web/-/ready delay=0s timeout=3s period=5s #success=1 #failure=120
@@ -129,4 +129,7 @@ Pod Template:
     Medium:     
     SizeLimit:  <unset>
 Volume Claims:  <none>
-Events:         <none>
+Events:
+  Type    Reason            Age    From                    Message
+  ----    ------            ----   ----                    -------
+  Normal  SuccessfulCreate  9m10s  statefulset-controller  create Pod prometheus-prometheus-kube-prometheus-prometheus-0 in StatefulSet prometheus-prometheus-kube-prometheus-prometheus successful

@@ -1,6 +1,6 @@
 Name:               alertmanager-prometheus-kube-prometheus-alertmanager
-Namespace:          default
-CreationTimestamp:  Sun, 19 Sep 2021 18:31:54 +0700
+Namespace:          prometheus
+CreationTimestamp:  Tue, 21 Sep 2021 13:59:10 +0700
 Selector:           alertmanager=prometheus-kube-prometheus-alertmanager,app=alertmanager,app.kubernetes.io/instance=prometheus-kube-prometheus-alertmanager,app.kubernetes.io/managed-by=prometheus-operator,app.kubernetes.io/name=alertmanager
 Labels:             app=kube-prometheus-stack-alertmanager
                     app.kubernetes.io/instance=prometheus
@@ -11,8 +11,8 @@ Labels:             app=kube-prometheus-stack-alertmanager
                     heritage=Helm
                     release=prometheus
 Annotations:        meta.helm.sh/release-name: prometheus
-                    meta.helm.sh/release-namespace: default
-                    prometheus-operator-input-hash: 10271333629632799058
+                    meta.helm.sh/release-namespace: prometheus
+                    prometheus-operator-input-hash: 4151353885331003598
 Replicas:           1 desired | 1 total
 Update Strategy:    RollingUpdate
 Pods Status:        1 Running / 0 Waiting / 0 Succeeded / 0 Failed
@@ -36,7 +36,7 @@ Pod Template:
       --data.retention=120h
       --cluster.listen-address=
       --web.listen-address=:9093
-      --web.external-url=http://prometheus-kube-prometheus-alertmanager.default:9093
+      --web.external-url=http://prometheus-kube-prometheus-alertmanager.prometheus:9093
       --web.route-prefix=/
       --cluster.peer=alertmanager-prometheus-kube-prometheus-alertmanager-0.alertmanager-operated:9094
       --cluster.reconnect-timeout=5m
@@ -85,4 +85,7 @@ Pod Template:
     Medium:     
     SizeLimit:  <unset>
 Volume Claims:  <none>
-Events:         <none>
+Events:
+  Type    Reason            Age    From                    Message
+  ----    ------            ----   ----                    -------
+  Normal  SuccessfulCreate  9m24s  statefulset-controller  create Pod alertmanager-prometheus-kube-prometheus-alertmanager-0 in StatefulSet alertmanager-prometheus-kube-prometheus-alertmanager successful
