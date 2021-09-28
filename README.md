@@ -104,4 +104,26 @@ mà mục tiêu expose ra thường là http://địa-chỉ/metrics
 
 3. Monitor your own application
    - sử dụng client libraries.
+
+### 7. Cơ chế Pull của Prometheus
+- khác với một số hệ thống khác sử dụng cơ chế push như AWS Cloud Watch, Solarwind có thể gặp một số vấn đề:
+ + high load for network traffic.
+ + có thể trở thành một điểm thắc cổ chai (bottleneck) trong hệ thống.
+ + install additional software or tool to push metrics.
+- more advantages:
+ + multiple instance Prometheus can pull metrics.
+ + better dectecion/insight if service is up and running.
+
+### 8. Configuing Prometheus
+- Cấu hình monitor target nào.
+- Cấu hình thời gian (interval) lấy dữ liệu.
+- Cấu hình rule, ví dụ rule cảnh bảo.
+
+### 9. Alert Manager - Triggering alerts
+- Alert Manager chịu trách nhiệm nhận các cảnh bảo từ Server Prometheus
+- Notify via channel like email, slack,...
+
+### 10. Prometheus Data Storage - Where does Prometheus store the data?
+- Prometheus store data in local disk (hdd/ssd) of node.
+- 
    
